@@ -242,34 +242,36 @@
             color: white;
         }
         nav ul {
+            display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem 1.5rem; /* More horizontal and vertical gap */
+            gap: 0.5rem 1.5rem;
             justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
         }
         nav li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0;
         }
         @media (max-width: 640px) {
             nav ul {
-                flex-direction: row;
-                flex-wrap: wrap;
                 gap: 0.5rem 0.5rem;
-            }
-            nav li {
-                width: 48%;
-                margin-bottom: 0.5rem;
             }
             nav a {
                 font-size: 0.95rem;
                 padding: 0.6rem 0.5rem;
-                min-width: unset;
+                min-width: 90px;
+            }
+            nav li {
+                margin-bottom: 0;
+                width: auto;
             }
         }
     </style>
 </head>
 <body class="bg-sky-50 text-slate-800">
 
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md py-3">
+    <nav class="bg-white/80 backdrop-blur-md shadow-md py-6">
         <div class="container mx-auto px-4">
             <ul class="flex flex-wrap justify-center space-x-2 md:space-x-4 text-sm font-semibold text-sky-700">
                 <li><a href="#introducao" class="nav-link">Introdução</a></li>
@@ -281,7 +283,7 @@
         </div>
     </nav>
 
-    <div class="container mx-auto p-4 md:p-8">
+    <div class="container mx-auto p-4 md:p-8 mt-8">
 
         <section id="introducao" class="py-12 text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">ISC: Guardiãs da Igualdade de Género e do Empoderamento Feminino</h1>
@@ -491,7 +493,7 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Um Futuro Mais Igualitário é Possível</h2>
                 <p class="text-lg text-sky-100 max-w-3xl mx-auto mb-8">
-                    As ISC são atores centrais na construção de um futuro onde a igualdade de género e o empoderamento feminino são uma realidade. O seu trabalho transcende a fiscalização, catalisando mudanças sistémicas e promovendo sociedades mais justas.
+                    As ISC são atores centrais na construção de um futuro onde a igualdade de género e o empoderamento feminino são uma realidade. O seu trabalho transcende a fiscalização, catalisando mudanças sistêmicas e promovendo sociedades mais justas.
                 </p>
                 <div class="max-w-xl mx-auto p-6 bg-white/10 rounded-lg">
                     <p class="text-xl italic text-sky-200">"Ao fortalecer a autonomia das ISC, investir em capacidades e promover a igualdade internamente, podemos maximizar o seu impacto transformador."</p>
