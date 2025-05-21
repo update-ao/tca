@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: ISC e Empoderamento Feminino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- 
+    INFOGRAPHIC NARRATIVE & STRUCTURE PLAN:
+
+    Overall Theme: O Papel Crucial das ISC no Empoderamento Feminino e na Boa Governança
+
+    Sections:
+
+    1.  Título e Introdução (Hook):
+        * Título Principal: "ISC: Guardiãs da Igualdade de Género e do Empoderamento Feminino"
+        * Breve parágrafo introdutório destacando o papel vital das ISC.
+        * Visual: Um "Single Big Number" ou estatística impactante sobre a importância do tema (ex: % de ISC que consideram género prioritário, ou o impacto económico da igualdade).
+
+    2.  O Que São as ISC e o Seu Novo Mandato:
+        * Explicação concisa do que são as ISC e a sua evolução para além da fiscalização financeira.
+        * Destaque para o alinhamento com o ODS 5.
+        * Visual: Um diagrama simples (HTML/CSS) ilustrando a transição do papel tradicional para o novo papel focado em sustentabilidade e igualdade.
+
+    3.  Mecanismos de Contribuição das ISC (Como as ISC Fazem a Diferença):
+        * Esta será a secção principal, dividida em sub-secções.
+        * 3.1. Auditorias de Género:
+            * Texto: Explicação do que são e as 4 etapas.
+            * Visual: Um gráfico de barras (Chart.js) mostrando a % de governos com políticas vs. alocação de recursos (baseado na auditoria ODS 5 Ibero-América).
+            * Visual: Um pictograma (Unicode/HTML) ou um pequeno gráfico de barras (Chart.js) para ilustrar o aumento de casos de assédio no Brasil.
+            * Texto: Breve menção a outros exemplos de auditorias (VBG Uganda/Fiji, etc.).
+        * 3.2. Fiscalização da Alocação de Recursos (Orçamentação Sensível ao Género - OSG):
+            * Texto: O que é OSG e o papel das ISC.
+            * Visual: Um gráfico de Donut (Chart.js) mostrando a % de países com sistemas de rastreamento de recursos para igualdade de género (1/4 de 105 países).
+            * Texto: Desafios no financiamento.
+        * 3.3. Promoção da Transparência e Responsabilidade:
+            * Texto: Como as ISC expõem falhas e melhoram políticas.
+            * Visual: Um diagrama de fluxo simples (HTML/CSS) mostrando: Relatório ISC -> Exposição de Falhas -> Responsabilização -> Melhoria de Políticas.
+        * 3.4. Fortalecimento da Governança e Marcos Legais:
+            * Texto: Monitorização de leis e políticas.
+            * Visual: Um ícone de "escudo" ou "balança da justiça" (Unicode) com texto de apoio.
+        * 3.5. Liderando pelo Exemplo (Representatividade Interna):
+            * Texto: Importância da representatividade feminina nas ISC.
+            * Visual: Um gráfico de barras (Chart.js) mostrando a % de ISC lideradas por mulheres (<25%) e % de mulheres em gestão (27%/39%).
+            * Visual: Um gráfico de barras/pizza pequeno (Chart.js) mostrando as estatísticas da IDI (37% pontos focais, 30% política de género).
+
+    4.  O Papel das Organizações Internacionais (INTOSAI e OISC/CPLP):
+        * 4.1. INTOSAI:
+            * Texto: Compromisso global, iniciativas da IDI (TOGETHER, EFA, ISAM, LNOB).
+            * Visual: Um diagrama de relacionamento simples (HTML/CSS) mostrando INTOSAI/IDI -> Programas -> Apoio às ISC.
+        * 4.2. OISC/CPLP:
+            * Texto: Esforços regionais, auditorias coordenadas VBG PALOP-TL, programa "Mulheres na Liderança".
+            * Visual: Um mapa estilizado (HTML/CSS com pontos para países CPLP, sem SVG) ou um destaque textual para a cooperação.
+
+    5.  Desafios e Oportunidades Futuras:
+        * 5.1. Desafios Persistentes:
+            * Texto: Lacunas de dados, limitações de capacidade, normas culturais, etc.
+            * Visual: Um gráfico de radar (Chart.js) mostrando a severidade percebida de diferentes desafios (dados qualitativos transformados em escala).
+        * 5.2. Melhores Práticas e Inovações:
+            * Texto: Dados interseccionais, LNOB, ferramentas inovadoras, racional económico, auditoria de IA.
+            * Visual: Ícones (Unicode) representando cada inovação (ex: cérebro para IA, gráfico para dados).
+        * 5.3. Direções Futuras:
+            * Texto: Análise de dados avançada, auditoria de IA, abordagens transformadoras.
+
+    6.  Conclusão e Chamada à Ação:
+        * Breve resumo do impacto das ISC.
+        * Chamada à ação para apoiar o trabalho das ISC.
+        * Visual: Uma citação inspiradora ou um "Single Big Number" sobre o potencial futuro.
+
+    Cor Escolhida: "Brilliant Blues"
+    Hex Codes (Brilliant Blues - aproximado, adaptado para bom contraste):
+    - Dark Blue: #0A2463 (Tailwind: blue-900)
+    - Medium Blue: #3E92CC (Tailwind: sky-600)
+    - Light Blue: #A6D9F7 (Tailwind: sky-300)
+    - Accent Teal: #1D7874 (Tailwind: teal-600)
+    - Background Light: #F0F8FF (Tailwind: sky-50)
+    - Text Dark: #1A202C (Tailwind: slate-800)
+    - Text Light: #FFFFFF
+
+    Confirmação: NEM MERMAID JS NEM SVG SERÃO USADOS.
+    -->
+
+    <!--
+    VISUALIZATION CHOICES PLAN:
+
+    1.  Título e Introdução:
+        * Data Point: Impacto inicial das ISC.
+        * Goal: Informar.
+        * Chosen Visualization: Single Big Number (HTML/CSS) - e.g., "ODS 5: Foco Central".
+        * Justification: Simples, direto, capta a atenção. (NO SVG)
+
+    2.  O Que São as ISC e o Seu Novo Mandato:
+        * Data Point: Evolução do papel das ISC.
+        * Goal: Organizar/Informar.
+        * Chosen Visualization: Diagrama de Fluxo simples (HTML/CSS com Tailwind).
+        * Justification: Mostra a transição de forma clara. (NO SVG, NO MERMAID JS)
+
+    3.  Mecanismos de Contribuição:
+        * 3.1. Auditorias de Género:
+            * Data Point: Políticas vs. Alocação de Recursos (ODS 5 Ibero-América: 90% políticas, <43% recursos).
+            * Goal: Comparar.
+            * Chosen Visualization: Gráfico de Barras (Chart.js - Canvas).
+            * Justification: Compara duas métricas chave de forma eficaz. (NO SVG)
+            * Data Point: Aumento de casos de assédio no Brasil (44.8%).
+            * Goal: Informar/Comparar (implícito antes vs. depois).
+            * Chosen Visualization: Single Big Number com texto (HTML/CSS).
+            * Justification: Destaca uma estatística específica. (NO SVG)
+        * 3.2. Fiscalização da Alocação de Recursos (OSG):
+            * Data Point: Países com sistemas de rastreamento (1/4 de 105 = 25%).
+            * Goal: Informar (proporção).
+            * Chosen Visualization: Gráfico de Donut (Chart.js - Canvas).
+            * Justification: Ideal para mostrar uma proporção de um todo. (NO SVG)
+        * 3.3. Promoção da Transparência e Responsabilidade:
+            * Data Point: Processo de responsabilização.
+            * Goal: Organizar.
+            * Chosen Visualization: Diagrama de Fluxo (HTML/CSS com Tailwind).
+            * Justification: Visualiza um processo sequencial. (NO SVG, NO MERMAID JS)
+        * 3.5. Liderando pelo Exemplo (Representatividade Interna):
+            * Data Point: Liderança feminina nas ISC (<25% líderes, 27%/39% gestão).
+            * Goal: Comparar/Informar.
+            * Chosen Visualization: Gráfico de Barras (Chart.js - Canvas).
+            * Justification: Compara percentagens de forma clara. (NO SVG)
+            * Data Point: Estatísticas IDI (37% pontos focais, 30% política de género).
+            * Goal: Informar.
+            * Chosen Visualization: Gráfico de Barras pequeno (Chart.js - Canvas).
+            * Justification: Apresenta múltiplas estatísticas de forma concisa. (NO SVG)
+
+    4.  O Papel das Organizações Internacionais:
+        * 4.1. INTOSAI:
+            * Data Point: Estrutura de apoio da INTOSAI/IDI.
+            * Goal: Organizar/Relacionar.
+            * Chosen Visualization: Diagrama de Relacionamento (HTML/CSS com Tailwind).
+            * Justification: Mostra a ligação entre entidades e programas. (NO SVG, NO MERMAID JS)
+        * 4.2. OISC/CPLP:
+            * Data Point: Foco regional e colaboração.
+            * Goal: Informar/Organizar.
+            * Chosen Visualization: Lista Destacada com Ícones (Unicode/HTML/CSS) para iniciativas.
+            * Justification: Apresenta iniciativas chave de forma visualmente apelativa. (NO SVG)
+
+    5.  Desafios e Oportunidades Futuras:
+        * 5.1. Desafios Persistentes:
+            * Data Point: Principais desafios (lacunas de dados, capacidade, cultura).
+            * Goal: Comparar (severidade implícita).
+            * Chosen Visualization: Gráfico de Radar (Chart.js - Canvas).
+            * Justification: Mostra múltiplas dimensões de desafio. (NO SVG)
+        * 5.2. Melhores Práticas e Inovações:
+            * Data Point: Inovações (dados interseccionais, LNOB, IA).
+            * Goal: Informar.
+            * Chosen Visualization: Lista com Ícones (Unicode/HTML/CSS).
+            * Justification: Apresenta inovações de forma clara e visual. (NO SVG)
+
+    6.  Conclusão:
+        * Data Point: Potencial impacto futuro.
+        * Goal: Informar.
+        * Chosen Visualization: Citação ou "Single Big Number" (HTML/CSS).
+        * Justification: Conclui com uma mensagem forte. (NO SVG)
+
+    Confirmação: NEM MERMAID JS NEM SVG SERÃO USADOS em nenhuma visualização. Todas as visualizações serão Chart.js (Canvas) ou HTML/CSS com Tailwind.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; 
+            max-height: 400px;
+            overflow-x: auto; /* Add this line */
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .section-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* bold */
+            color: #0A2463; /* text-blue-900 */
+            margin-bottom: 1rem; /* mb-4 */
+            text-align: center;
+        }
+        .subsection-title {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* semibold */
+            color: #3E92CC; /* text-sky-600 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            margin-top: 1.5rem; /* mt-6 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .stat-number {
+            font-size: 3rem; /* text-5xl */
+            font-weight: 700; /* bold */
+            color: #1D7874; /* text-teal-600 */
+        }
+        .stat-label {
+            font-size: 1rem; /* text-base */
+            color: #4A5568; /* text-slate-600 */
+            margin-top: 0.5rem; /* mt-2 */
+        }
+        .flow-step {
+            background-color: #EBF5FF; /* bg-sky-100 */
+            border: 2px solid #A6D9F7; /* border-sky-300 */
+            color: #0A2463; /* text-blue-900 */
+            padding: 1rem; /* p-4 */
+            border-radius: 0.5rem; /* rounded-lg */
+            text-align: center;
+            font-weight: 600; /* semibold */
+        }
+        .flow-arrow {
+            font-size: 2rem; /* text-3xl */
+            color: #3E92CC; /* text-sky-600 */
+            align-self: center;
+        }
+        nav a {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #A6D9F7; /* sky-300 */
+            color: #0A2463; /* blue-900 */
+        }
+        .active-nav {
+            background-color: #3E92CC; /* sky-600 */
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-sky-50 text-slate-800">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md py-3">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap justify-center space-x-2 md:space-x-4 text-sm font-semibold text-sky-700">
+                <li><a href="#introducao" class="nav-link">Introdução</a></li>
+                <li><a href="#mecanismos" class="nav-link">Mecanismos</a></li>
+                <li><a href="#organizacoes" class="nav-link">Organizações</a></li>
+                <li><a href="#desafios" class="nav-link">Desafios</a></li>
+                <li><a href="#conclusao" class="nav-link">Conclusão</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <section id="introducao" class="py-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">ISC: Guardiãs da Igualdade de Género e do Empoderamento Feminino</h1>
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto mb-8">
+                As Instituições Superiores de Controlo (ISC), como os Tribunais de Contas, desempenham um papel cada vez mais vital na promoção da igualdade de género e do empoderamento feminino. Indo além da fiscalização financeira, as ISC alinham-se com a Agenda 2030 da ONU, especialmente o ODS 5, para construir sociedades mais justas e equitativas.
+            </p>
+            <div class="card max-w-sm mx-auto">
+                <div class="stat-number">ODS 5</div>
+                <p class="stat-label">Alcançar a igualdade de género e empoderar todas as mulheres e raparigas – Foco central das ISC modernas.</p>
+            </div>
+        </section>
+
+        <section id="novo-mandato" class="py-12">
+            <h2 class="section-title">O Novo Mandato das ISC</h2>
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto mb-8 text-center">
+                Tradicionalmente focadas na fiscalização das receitas e despesas governamentais, as ISC expandiram o seu mandato. Hoje, são atores indispensáveis na promoção da boa governança, da transparência e, crucialmente, da igualdade de género, contribuindo diretamente para o desenvolvimento sustentável.
+            </p>
+            <div class="card">
+                <h3 class="subsection-title text-center mb-6">Evolução do Papel das ISC</h3>
+                <div class="flex flex-col md:flex-row items-center justify-around space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flow-step w-full md:w-1/3">
+                        <span class="text-4xl mb-2 block">💰</span>
+                        Papel Tradicional: Fiscalização Financeira
+                    </div>
+                    <div class="flow-arrow hidden md:block">&rarr;</div>
+                    <div class="text-4xl md:hidden self-center my-2">&darr;</div>
+                    <div class="flow-step w-full md:w-1/3">
+                        <span class="text-4xl mb-2 block">⚖️</span>
+                        Mandato Expandido: Boa Governança e Transparência
+                    </div>
+                    <div class="flow-arrow hidden md:block">&rarr;</div>
+                     <div class="text-4xl md:hidden self-center my-2">&darr;</div>
+                    <div class="flow-step w-full md:w-1/3">
+                        <span class="text-4xl mb-2 block">♀️</span>
+                        Foco Atual: Igualdade de Género e ODS 5
+                    </div>
+                </div>
+                <p class="mt-6 text-center text-slate-600">Esta transição reflete um compromisso com objetivos sociais mais amplos, incluindo a redução da pobreza e a defesa dos direitos humanos.</p>
+            </div>
+        </section>
+
+        <section id="mecanismos" class="py-12">
+            <h2 class="section-title">Como as ISC Fazem a Diferença</h2>
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto mb-10 text-center">
+                As ISC utilizam diversas abordagens multifacetadas para promover a igualdade de género e o empoderamento feminino, desde auditorias especializadas até ao fortalecimento das suas próprias estruturas internas.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="subsection-title">3.1 Auditorias de Género</h3>
+                    <p class="mb-4 text-slate-600">Estas auditorias avaliam o impacto das políticas públicas na igualdade de género, verificando o cumprimento dos compromissos governamentais. Envolvem seleção do tema, planeamento, exame e relato.</p>
+                    <p class="mb-4 text-slate-600 font-semibold">Exemplo Chave: Auditoria ODS 5 (Ibero-América)</p>
+                    <div class="chart-container">
+                        <canvas id="ods5AuditChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500 text-center">Fonte: Auditoria Coordenada ODS 5, OLACEFS (2018). Evidencia a lacuna entre políticas e recursos.</p>
+                    
+                    <p class="mt-6 mb-2 text-slate-600 font-semibold">Assédio em Universidades (Brasil):</p>
+                    <div class="bg-sky-100 p-4 rounded-lg text-center">
+                        <div class="stat-number text-4xl">44,8%</div>
+                        <p class="stat-label text-sm">Aumento nos casos de assédio sexual julgados em tribunal (2021-2023), com baixas taxas de investigação interna.</p>
+                    </div>
+                     <p class="mt-2 text-sm text-slate-500 text-center">Fonte: Auditoria TCU Brasil.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">3.2 Fiscalização da Alocação de Recursos (OSG)</h3>
+                    <p class="mb-4 text-slate-600">A Orçamentação Sensível ao Género (OSG) integra objetivos de igualdade nos orçamentos. As ISC fiscalizam se os recursos são alocados e gastos eficazmente.</p>
+                    <p class="mb-4 text-slate-600 font-semibold">Desafio Global: Rastreamento de Recursos</p>
+                    <div class="chart-container">
+                        <canvas id="resourceTrackingChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500 text-center">Fonte: Inquérito global a 105 países. Apenas 25% possuem sistemas abrangentes para rastrear fundos para igualdade de género.</p>
+                </div>
+
+                <div class="card md:col-span-2">
+                    <h3 class="subsection-title">3.3 Promoção da Transparência e Responsabilidade</h3>
+                    <p class="mb-6 text-slate-600">A supervisão das ISC expõe irregularidades e promove o uso responsável dos fundos públicos, fortalecendo a responsabilização dos gestores e a melhoria das políticas.</p>
+                    <div class="flex flex-col md:flex-row items-stretch justify-around space-y-4 md:space-y-0 md:space-x-2">
+                        <div class="flow-step flex-1 flex flex-col justify-center"><span>📄</span>Relatórios das ISC</div>
+                        <div class="flow-arrow hidden md:flex items-center justify-center">&rarr;</div>
+                        <div class="text-3xl md:hidden self-center my-1">&darr;</div>
+                        <div class="flow-step flex-1 flex flex-col justify-center"><span>🔍</span>Exposição de Falhas</div>
+                        <div class="flow-arrow hidden md:flex items-center justify-center">&rarr;</div>
+                        <div class="text-3xl md:hidden self-center my-1">&darr;</div>
+                        <div class="flow-step flex-1 flex flex-col justify-center"><span>🎯</span>Responsabilização</div>
+                        <div class="flow-arrow hidden md:flex items-center justify-center">&rarr;</div>
+                        <div class="text-3xl md:hidden self-center my-1">&darr;</div>
+                        <div class="flow-step flex-1 flex flex-col justify-center"><span>📈</span>Melhoria de Políticas</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="subsection-title">3.4 Fortalecimento da Governança</h3>
+                    <p class="mb-4 text-slate-600">As ISC monitorizam a implementação de leis e políticas de género, reforçando o arcabouço legal que protege os direitos das mulheres.</p>
+                    <div class="text-center">
+                        <span class="text-6xl text-sky-600">🛡️</span>
+                        <p class="mt-2 font-semibold text-blue-900">Guardiãs dos Direitos das Mulheres</p>
+                        <p class="text-sm text-slate-500">Assegurando a conformidade com compromissos nacionais e internacionais.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">3.5 Liderando pelo Exemplo</h3>
+                    <p class="mb-4 text-slate-600">As ISC procuram aumentar a representatividade feminina internamente, servindo de modelo.</p>
+                    <p class="mb-2 text-slate-600 font-semibold">Liderança Feminina nas ISC (Global):</p>
+                    <div class="chart-container" style="height: 250px; max-height: 300px;">
+                        <canvas id="femaleLeadershipChart"></canvas>
+                    </div>
+                     <p class="mt-1 mb-4 text-sm text-slate-500 text-center">Fonte: INTOSAI/IDI, 2018-2020.</p>
+                    <p class="mb-2 text-slate-600 font-semibold">Políticas de Género Internas (IDI Global Survey 2023):</p>
+                     <div class="chart-container" style="height: 200px; max-height: 250px;">
+                        <canvas id="internalGenderPoliciesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organizacoes" class="py-12 bg-sky-100">
+            <h2 class="section-title">O Papel das Organizações Internacionais</h2>
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto mb-10 text-center">
+                Organizações como a INTOSAI e a OISC/CPLP são cruciais, fornecendo diretrizes, ferramentas e capacitação para as ISC em todo o mundo.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="subsection-title"><span class="text-blue-900">INTOSAI</span> e IDI</h3>
+                    <p class="mb-4 text-slate-600">A Organização Internacional de Instituições Superiores de Controlo (INTOSAI) e a sua Iniciativa de Desenvolvimento (IDI) promovem ativamente a auditoria de género e apoiam as ISC a tornarem-se mais sensíveis ao género.</p>
+                    <p class="font-semibold text-sky-700 mb-2">Principais Iniciativas IDI:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-600">
+                        <li><span class="font-bold">TOGETHER:</span> Apoia a gestão de RH sensível ao género.</li>
+                        <li><span class="font-bold">Equal Futures Audit (EFA):</span> Integra igualdade e inclusão em auditorias.</li>
+                        <li><span class="font-bold">LNOB Framework:</span> Ajuda a avaliar se políticas não deixam ninguém para trás.</li>
+                        <li><span class="font-bold">PESA:</span> Educação profissional inclusiva para auditores.</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-teal-50 rounded-lg">
+                        <p class="text-sm text-teal-700"><span class="font-bold">Parceria Chave:</span> INTOSAI e PNUD colaboram para fortalecer capacidades e incentivar o Selo de Igualdade de Género para Instituições Públicas.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title"><span class="text-blue-900">OISC/CPLP</span></h3>
+                    <p class="mb-4 text-slate-600">A Organização das ISC da Comunidade dos Países de Língua Portuguesa (OISC/CPLP) alinha-se com a INTOSAI, focando em esforços regionais.</p>
+                    <p class="font-semibold text-sky-700 mb-2">Iniciativas Destacadas:</p>
+                     <ul class="list-disc list-inside space-y-1 text-slate-600">
+                        <li><span class="font-bold">Auditorias Coordenadas sobre Violência Baseada no Género:</span> Ex: Moçambique (PALOP-TL), fornecendo dados para combate à VBG.</li>
+                        <li><span class="font-bold">Programa 'Mulheres na Liderança':</span> Formação para mulheres em cargos de liderança nas ISC lusófonas.</li>
+                        <li><span class="font-bold">Seminários e Workshops:</span> Troca de conhecimentos sobre auditorias de género.</li>
+                    </ul>
+                    <div class="mt-4 p-3 bg-sky-200 rounded-lg">
+                        <p class="text-sm text-blue-800"><span class="font-bold">Foco Regional:</span> Adaptação de princípios globais a contextos específicos, crucial para temas como VBG.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="desafios" class="py-12">
+            <h2 class="section-title">Desafios e Oportunidades Futuras</h2>
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto mb-10 text-center">
+                Apesar do progresso, a auditoria sensível ao género enfrenta obstáculos, mas também abre portas para inovação e um impacto ainda maior.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="subsection-title">5.1 Desafios Persistentes</h3>
+                    <p class="mb-4 text-slate-600">Superar estes desafios é crucial para a eficácia das ISC na promoção da igualdade.</p>
+                    <div class="chart-container">
+                        <canvas id="challengesRadarChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500 text-center">Representação da severidade percebida dos desafios.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="subsection-title">5.2 Melhores Práticas e Inovações</h3>
+                    <p class="mb-4 text-slate-600">Novas abordagens e ferramentas estão a moldar o futuro da auditoria de género.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-teal-600">📊</span>
+                            <div><span class="font-semibold">Dados Interseccionais:</span> Análise de como múltiplas formas de discriminação se cruzam.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-teal-600">🌍</span>
+                            <div><span class="font-semibold">Princípio "Não Deixar Ninguém Para Trás" (LNOB):</span> Mandato amplo para governação inclusiva.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-teal-600">💡</span>
+                            <div><span class="font-semibold">Ferramentas Inovadoras:</span> Kits de ferramentas digitais e auditorias temáticas (ex: assédio, contratação pública).</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-teal-600">📈</span>
+                            <div><span class="font-semibold">Racional Económico:</span> Evidência de que igualdade de género impulsiona o crescimento.</div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3 text-teal-600">🤖</span>
+                            <div><span class="font-semibold">Auditoria de Sistemas de IA:</span> Garantir que a IA não perpetue vieses de género.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <div class="card mt-8">
+                <h3 class="subsection-title text-center">5.3 Direções Futuras</h3>
+                <p class="text-center text-slate-600 max-w-2xl mx-auto">
+                    O futuro aponta para maior sofisticação metodológica, foco na interseccionalidade e integração com tecnologias emergentes, exigindo cooperação internacional contínua e resiliência face a crises.
+                </p>
+            </div>
+        </section>
+
+        <section id="conclusao" class="py-16 text-center bg-blue-900 text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Um Futuro Mais Igualitário é Possível</h2>
+                <p class="text-lg text-sky-100 max-w-3xl mx-auto mb-8">
+                    As ISC são atores centrais na construção de um futuro onde a igualdade de género e o empoderamento feminino são uma realidade. O seu trabalho transcende a fiscalização, catalisando mudanças sistémicas e promovendo sociedades mais justas.
+                </p>
+                <div class="max-w-xl mx-auto p-6 bg-white/10 rounded-lg">
+                    <p class="text-xl italic text-sky-200">"Ao fortalecer a autonomia das ISC, investir em capacidades e promover a igualdade internamente, podemos maximizar o seu impacto transformador."</p>
+                </div>
+                <a href="https://www.intosai.org/" target="_blank" class="mt-10 inline-block bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300">
+                    Saiba Mais sobre a INTOSAI
+                </a>
+            </div>
+        </section>
+
+        <footer class="text-center py-8 text-sm text-slate-600">
+            <p>&copy; <span id="currentYear"></span> Infográfico sobre ISC e Empoderamento Feminino. Baseado no relatório de pesquisa.</p>
+            <p>Este infográfico é para fins ilustrativos e educacionais. Criado por Carlos Araújo.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Function to wrap labels for Chart.js
+        function wrapLabels(label, maxWidth) {
+            const words = label.split(' ');
+            let line = '';
+            const lines = [];
+            for (const word of words) {
+                if ((line + word).length > maxWidth) {
+                    lines.push(line.trim());
+                    line = '';
+                }
+                line += word + ' ';
+            }
+            lines.push(line.trim());
+            return lines;
+        }
+
+        // Common Tooltip Configuration
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#1A202C' // slate-800
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: 'rgba(0,0,0,0.7)',
+                    titleColor: 'white',
+                    bodyColor: 'white',
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: { 
+                        color: '#4A5568', // slate-600
+                        font: { size: 10 } 
+                    },
+                    grid: { color: '#E2E8F0' } // slate-200
+                },
+                x: {
+                    ticks: { 
+                        color: '#4A5568', // slate-600
+                        font: { size: 10 },
+                        maxRotation: 45,
+                        minRotation: 45
+                    },
+                    grid: { display: false }
+                }
+            }
+        };
+        
+        // Chart 1: ODS 5 Audit Chart (Bar Chart)
+        const ods5Labels = ['Governos com Políticas de Igualdade de Género', 'Governos com Alocação de Recursos Adequada'];
+        new Chart(document.getElementById('ods5AuditChart'), {
+            type: 'bar',
+            data: {
+                labels: ods5Labels.map(label => wrapLabels(label, 16)),
+                datasets: [{
+                    label: '% de Governos',
+                    data: [90, 43],
+                    backgroundColor: ['#3E92CC', '#A6D9F7'], // sky-600, sky-300
+                    borderColor: ['#0A2463', '#3E92CC'], // blue-900, sky-600
+                    borderWidth: 1
+                }]
+            },
+            options: { ...commonChartOptions }
+        });
+
+        // Chart 2: Resource Tracking Chart (Donut Chart)
+        new Chart(document.getElementById('resourceTrackingChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Com Sistemas Abrangentes de Rastreamento', 'Sem Sistemas Abrangentes'],
+                datasets: [{
+                    label: 'Rastreamento de Recursos para Igualdade de Género',
+                    data: [25, 75],
+                    backgroundColor: ['#3E92CC', '#EBF5FF'], // sky-600, sky-100
+                    borderColor: ['#0A2463', '#A6D9F7'], // blue-900, sky-300
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { 
+                        position: 'top',
+                        labels: { color: '#1A202C'}
+                    },
+                    tooltip: { // No title for doughnut, direct label
+                         callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + '%';
+                                }
+                                return label;
+                            }
+                        },
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        titleColor: 'white',
+                        bodyColor: 'white',
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Female Leadership Chart (Bar Chart)
+        const leadershipLabels = ['ISC Lideradas por Mulheres', 'Mulheres em Gestão (Mundial)', 'Mulheres em Gestão Sénior (ISC)'];
+        new Chart(document.getElementById('femaleLeadershipChart'), {
+            type: 'bar',
+            data: {
+                labels: leadershipLabels.map(label => wrapLabels(label, 16)),
+                datasets: [{
+                    label: '% de Representatividade',
+                    data: [25, 27, 39], // <25% is represented as 25 for charting
+                    backgroundColor: ['#3E92CC', '#A6D9F7', '#1D7874'], // sky-600, sky-300, teal-600
+                    borderColor: '#0A2463', // blue-900
+                    borderWidth: 1
+                }]
+            },
+            options: { ...commonChartOptions, indexAxis: 'y' } // Horizontal bar chart
+        });
+
+        // Chart 4: Internal Gender Policies (Bar Chart) - Simplified
+        const internalPoliciesLabels = ['ISC com Pontos Focais de Género', 'ISC com Política de Género', 'Plano Estratégico promove Género', 'RH aborda Género'];
+        new Chart(document.getElementById('internalGenderPoliciesChart'), {
+            type: 'bar',
+            data: {
+                labels: internalPoliciesLabels.map(label => wrapLabels(label,12)),
+                datasets: [{
+                    label: '% de ISC (IDI Survey 2023)',
+                    data: [37, 30, 40, 37],
+                    backgroundColor: '#A6D9F7', // sky-300
+                    borderColor: '#3E92CC', // sky-600
+                    borderWidth: 1
+                }]
+            },
+            options: { ...commonChartOptions, 
+                 scales: {
+                    y: { ...commonChartOptions.scales.y, suggestedMax: 50 }, // Adjust max for better visualization
+                    x: { ...commonChartOptions.scales.x }
+                }
+            }
+        });
+        
+        // Chart 5: Challenges Radar Chart
+        const challengesLabels = ['Lacunas de Dados', 'Limitações de Capacidade', 'Normas Culturais', 'Independência das ISC', 'Implementação de Políticas', 'Fragilidade do Progresso'];
+        new Chart(document.getElementById('challengesRadarChart'), {
+            type: 'radar',
+            data: {
+                labels: challengesLabels.map(label => wrapLabels(label,16)),
+                datasets: [{
+                    label: 'Severidade Percebida dos Desafios',
+                    data: [8, 9, 7, 6, 8, 7], // Example data (scale 1-10)
+                    fill: true,
+                    backgroundColor: 'rgba(62, 146, 204, 0.2)', // sky-600 with alpha
+                    borderColor: '#3E92CC', // sky-600
+                    pointBackgroundColor: '#3E92CC',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#3E92CC'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { 
+                        labels: { color: '#1A202C'}
+                    },
+                   tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback // Use common for multiline labels
+                        },
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        titleColor: 'white',
+                        bodyColor: 'white',
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#A6D9F7' }, // sky-300
+                        grid: { color: '#A6D9F7' }, // sky-300
+                        pointLabels: { 
+                            font: { size: 10 },
+                            color: '#0A2463' // blue-900
+                        },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            color: '#4A5568', //slate-600
+                            stepSize: 2
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                }
+            }
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll and active nav highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function changeActiveLink() {
+            let index = sections.length;
+
+            while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+            
+            navLinks.forEach((link) => link.classList.remove('active-nav'));
+            if (navLinks[index]) {
+                 navLinks[index].classList.add('active-nav');
+            }
+        }
+
+        changeActiveLink(); // Set active link on load
+        window.addEventListener('scroll', changeActiveLink); // Update on scroll
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Remove active class from all
+                navLinks.forEach(l => l.classList.remove('active-nav'));
+                // Add active class to clicked
+                this.classList.add('active-nav');
+            });
+        });
+
+    </script>
+</body>
+</html>
