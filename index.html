@@ -182,19 +182,19 @@
         .section-title {
             font-size: 2.25rem; /* text-4xl */
             font-weight: 700; /* bold */
-            color: #0A2463; /* text-blue-900 */
+            color: #1865f2; /* primary blue */
             margin-bottom: 1rem; /* mb-4 */
             text-align: center;
         }
         .subsection-title {
             font-size: 1.5rem; /* text-2xl */
             font-weight: 600; /* semibold */
-            color: #3E92CC; /* text-sky-600 */
+            color: #1865f2; /* primary blue */
             margin-bottom: 0.75rem; /* mb-3 */
             margin-top: 1.5rem; /* mt-6 */
         }
         .card {
-            background-color: white;
+            background-color: #fff;
             border-radius: 0.5rem; /* rounded-lg */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
             padding: 1.5rem; /* p-6 */
@@ -203,7 +203,7 @@
         .stat-number {
             font-size: 3rem; /* text-5xl */
             font-weight: 700; /* bold */
-            color: #1D7874; /* text-teal-600 */
+            color: #1865f2; /* primary blue */
         }
         .stat-label {
             font-size: 1rem; /* text-base */
@@ -211,9 +211,9 @@
             margin-top: 0.5rem; /* mt-2 */
         }
         .flow-step {
-            background-color: #EBF5FF; /* bg-sky-100 */
-            border: 2px solid #A6D9F7; /* border-sky-300 */
-            color: #0A2463; /* text-blue-900 */
+            background-color: #e6f0fe; /* light blue */
+            border: 2px solid #1865f2; /* primary blue */
+            color: #143e75; /* dark blue */
             padding: 1rem; /* p-4 */
             border-radius: 0.5rem; /* rounded-lg */
             text-align: center;
@@ -221,25 +221,27 @@
         }
         .flow-arrow {
             font-size: 2rem; /* text-3xl */
-            color: #3E92CC; /* text-sky-600 */
+            color: #1865f2; /* primary blue */
             align-self: center;
         }
         nav a {
+            background: transparent;
+            color: #1865f2; /* primary blue */
             padding: 0.75rem 1.25rem; /* More padding for touch */
             font-size: 1rem;
             display: inline-block;
             min-width: 120px;
             text-align: center;
             border-radius: 0.375rem;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         nav a:hover {
-            background-color: #A6D9F7; /* sky-300 */
-            color: #0A2463; /* blue-900 */
+            background-color: #e6f0fe; /* light blue */
+            color: #143e75; /* dark blue */
         }
         .active-nav {
-            background-color: #3E92CC; /* sky-600 */
-            color: white;
+            background-color: #1865f2; /* primary blue */
+            color: #fff;
         }
         nav ul {
             display: flex;
@@ -586,8 +588,8 @@
                 datasets: [{
                     label: '% de Governos',
                     data: [90, 43],
-                    backgroundColor: ['#3E92CC', '#A6D9F7'], // sky-600, sky-300
-                    borderColor: ['#0A2463', '#3E92CC'], // blue-900, sky-600
+                    backgroundColor: ['#1865f2', '#e6f0fe'], // primary blue, light blue
+                    borderColor: ['#143e75', '#1865f2'], // dark blue, primary blue
                     borderWidth: 1
                 }]
             },
@@ -602,8 +604,8 @@
                 datasets: [{
                     label: 'Rastreamento de Recursos para Igualdade de Género',
                     data: [25, 75],
-                    backgroundColor: ['#3E92CC', '#EBF5FF'], // sky-600, sky-100
-                    borderColor: ['#0A2463', '#A6D9F7'], // blue-900, sky-300
+                    backgroundColor: ['#1865f2', '#e6f0fe'], // primary blue, light blue
+                    borderColor: ['#143e75', '#1865f2'], // dark blue, primary blue
                     borderWidth: 1
                 }]
             },
